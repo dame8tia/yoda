@@ -1,10 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --font_roboto : "Roboto";
+}
+
+.border {
+    border : 5px red solid;
+}
+body{
+    width : 80vw;
+    margin-left: 20px;
+    margin-right:20px;
+
+}
 header {
     border : 2px red solid;
     height: 100vh;
+    /*width : 100vw;*/
+    background-image: url("../images/yoda.jpg")  ;
+    background-repeat: no-repeat;
+}
+.link {
+    text-decoration: none;
 }
 main {
     border : 2px red solid
 }
 footer {
     border : 2px red solid
+}
+
+.header-info{
+    display : flex;
+    justify-content: center;
+}
+.bcg-div-header{
+    background-color: #ccc6c6;
+    border-radius: 5px;
+    width:50vw;
+    font-family: var(--font_roboto);
+    padding: 5px;
+    margin-top : -15px;
+}
+.section2{
+    display:flex;
+    margin-top : 15px;
+    margin-bottom : 15px;
+    padding-right : 50px;
+    padding-left : 50px;
+    align-items: center;
+}
+.s2-item1{
+    width:150px;
+}
+
+.s2-item3{
+    width:25vw;
+    background-color: #ccc6c6;
+    border-radius: 15px;
+    padding-right : 10px;
+    padding-left : 10px;
+}
+
+.s2-item2{
+    width:50vw;
+    padding-right : 15px;
+    padding-left : 15px;
+}
+.item2-p{
+    /*padding: 15px;*/
+    text-align: justify;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    grid-auto-rows: 6ch; /* height of each row (definition in the first post) */
+    grid-gap: 2ch;
+}
+
+.one{
+    height: 150px;
+    text-align: center;
+}
+
+.one:hover{
+    transform : scale(1.5);
+}
+@media (min-width: 576px) and (max-width:950px){
+
+}
+@media(min-width: 950px){
+
 }
