@@ -1,0 +1,10 @@
+header {
+    border : 2px red solid;
+    height: 100vh;
+}
+main {
+    border : 2px red solid
+}
+footer {
+    border : 2px red solid
+}
