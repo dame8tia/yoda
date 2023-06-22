@@ -19,6 +19,10 @@ body{
     color: #ccc6c6;
 }
 
+.text-grey{
+    color:#EEEEEE;
+}
+
 .text-grand{
     font-size: 22px;
 }
@@ -29,6 +33,9 @@ body{
 
 .text-center{
     text-align: center;
+}
+.underline{
+    text-decoration: underline;
 }
 
 blockquote {
@@ -158,10 +165,14 @@ header {
 }
 
 /* ---------------------------------- */
+.section3{
+    background-color: black;
+    height: 50vh;
+}
 .citation{
     animation-name : opacityEffect;
-    animation-duration: 1.5s ;
-    animation-timing-function: linear;
+    animation-duration: 2s ;
+    animation-timing-function: ease-in-out;
 }
 @keyframes opacityEffect{
     0%{
@@ -190,12 +201,8 @@ header {
 
 
 /* ---------------------------------- */
-.section3{
-    background-color: black;
-    height: 50vh;
-}
 .wrapper{
-    width:100vw;
+    /*width:100vw;*/
     display: grid;
     grid-template-columns: repeat(1, 1fr); /*Fixe la largeur des colonnes*/
     /*grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); */ /*Fixe la hauteur des lignes*/
@@ -204,7 +211,8 @@ header {
 
     justify-items: center;
 
-    padding-top: 15px;
+    padding-top: 15px ;
+    
 }
 .item-grid{
     width: fit-content;
@@ -214,7 +222,7 @@ header {
 }
 .item-grid:hover{
     animation-name:fadeInOut;
-    animation-duration:2s;
+    animation-duration:3s;
     animation-timing-function: cubic-bezier();
     /*animation-fill-mode:backwards;*/
     /*animation-direction: alternate;*/
@@ -284,12 +292,14 @@ footer{
         height: 50vh;
     }
     .wrapper{
-        width:100vw;
+        /*width:100vw;*/
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         /*grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); */
         grid-auto-rows: auto; /* height of each row (definition in the first post) */
         grid-gap: 2ch;
+
+        padding: 15px 10px 0px 10px;
     }
     .item-grid{
         width: fit-content;
@@ -332,12 +342,15 @@ footer{
     }
 
     .wrapper{
-        width:100vw;
+        /*width:100vw;*/
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         /*grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); */
         grid-auto-rows: auto; /* height of each row (definition in the first post) */
         grid-gap: 2ch;
+        /*column-gap: 2ch;
+        row-gap: 0ch;*/
+        padding: 15px 70px 0px 70px;
     }
 
     .item-grid{
