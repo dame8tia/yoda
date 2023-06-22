@@ -1,4 +1,12 @@
 /*sur balise image object-fit: valueX et object-position*/
+body{
+    font-family: "Roboto";
+    font-size: 16px;
+    margin:0;
+    /*width : 100vw;
+    margin-left: 20px;
+    margin-right:20px;*/
+}
 
 .border {
     border : 5px red solid;
@@ -11,12 +19,35 @@
     color: #ccc6c6;
 }
 
-#id-email:valid{
-    background-color: darkcyan;
+.text-grand{
+    font-size: 22px;
 }
-#id-email:invalid{
-    background-color: rgb(255, 0, 85);
-  }
+
+.text-footer{
+    font-size: 12px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+/*------- classe affichage ------------*/
 
 .d-flex-col-center{
     display: flex;
@@ -43,18 +74,7 @@
     margin-top: 20px;
 }
 
-.formNews{
-    margin-top: 50px;
-}
-
-body{
-    font-family: "Roboto";
-    font-size: 16px;
-    margin:0;
-    /*width : 100vw;
-    margin-left: 20px;
-    margin-right:20px;*/
-}
+/*--------------------- */
 
 header {
     display: flex;
@@ -103,6 +123,8 @@ header {
     height: 32px;    
 }
 
+/* ---------------------------------- */
+
 .section2{
     height:fit-content;
 
@@ -134,6 +156,40 @@ header {
     /*padding: 15px;*/
     text-align: justify;
 }
+
+/* ---------------------------------- */
+.citation{
+    animation-name : opacityEffect;
+    animation-duration: 1.5s ;
+    animation-timing-function: linear;
+}
+@keyframes opacityEffect{
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1s;
+    }
+}
+
+.dot{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.dot:hover{
+    transition: 0.5s;
+    transform : scale(1.1);
+    opacity: 1;
+}
+
+
+
+/* ---------------------------------- */
 .section3{
     background-color: black;
     height: 50vh;
@@ -141,8 +197,8 @@ header {
 .wrapper{
     width:100vw;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /*grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); */
+    grid-template-columns: repeat(1, 1fr); /*Fixe la largeur des colonnes*/
+    /*grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); */ /*Fixe la hauteur des lignes*/
     grid-auto-rows: auto; /* height of each row (definition in the first post) */
     grid-gap: 2ch;
 
@@ -153,36 +209,56 @@ header {
 .item-grid{
     width: fit-content;
     height: auto;
+    border-radius: 15%;  
+
 }
+.item-grid:hover{
+    animation-name:fadeInOut;
+    animation-duration:2s;
+    animation-timing-function: cubic-bezier();
+    /*animation-fill-mode:backwards;*/
+    /*animation-direction: alternate;*/
+}
+
+@keyframes fadeInOut{
+    0%, 100%{
+        transform : scale(1);
+    }
+    50% {
+        transform : scale(1.5);
+    }
+}
+
 
 .item-grid img{
     width: 180px;
     height: 250px;
 }
-.item-grid:hover{
-    transform : scale(1.5);
-}
 
-#id_valid:valid {
-    background-color: green;
-    border: none;
-    outline: 2px solid deepskyblue;
-    border-radius: 5px;
-    accent-color: gold;
-}
 
+/*----------------- */
+.formNews{
+    margin-top: 50px;
+    padding-bottom: 15px;
+}
+footer{
+    width : 100vw;
+    background-color:  #EEEEEE;
+    border-top: black 1px solid;
+    padding-top: 15px;
+}
+#id-email:valid{
+    background-color: darkcyan;
+}
+#id-email:invalid{
+    background-color: rgb(255, 0, 85);
+}
 
 @media (min-width: 576px) and (max-width:950px){
     header {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 100vh;
-        width : 100vw;
-        /*background-image: url("../images/yoda.jpg")  ;*/
-        background-repeat: no-repeat;
         background-size: cover;
     }
+
     .header-info{
         width:50vw;
     }
@@ -229,7 +305,9 @@ header {
 
 @media(min-width: 950px){
 
-
+    header{
+        background-size: cover;
+    }
     .header-info{
         width:50vw;
     }
