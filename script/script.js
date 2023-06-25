@@ -3,28 +3,17 @@
 const ck = document.querySelector('#id-newletter');
 const email = document.querySelector('#id-email');
 const btn = document.querySelector('#id-submit');
+// --------
 const dotTous = document.querySelector('.section-dot');
 const dot = document.querySelectorAll('.dot');
 const citations = document.querySelectorAll('.citation')
 
-
-//dotTous.addEventListener('click', parseDot())
-//function parseDot(){
-//    for (let i = 0; i < dotTous.children.length; i++) {   
-//        dotTous.children[i].addEventListener('click', effetSlide(dotTous.children[i], i)); //effetSlide(dotTous[i], i)
-//        //coucou2(dotTous.children[i]);        
-//    }
-//}
-
-console.log(dot);
-dot.forEach((element)=>{
-    element.addEventListener('click', effetSlide);
-});
-
 ck.addEventListener('click',validation);
 email.addEventListener('click',validation);//'onmouseenter'
 
-function validation()
+
+// -------------- > Cadre Nous contacter
+function validation() 
 {
     console.log(ck);
     if (ck.checked){
@@ -41,6 +30,13 @@ function validation()
         console.log("Case cochée ?" + ck.checked);
     }
 }
+
+// -------------- > Citations
+
+console.log(dot);
+dot.forEach((element)=>{
+    element.addEventListener('click', effetSlide);
+});
 
 function effetSlide(clickDot){ // clickDot est un objet click de l'évément AddEventListener - Possède un attribut target
 
