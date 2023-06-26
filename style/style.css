@@ -1,4 +1,8 @@
 /*sur balise image object-fit: valueX et object-position*/
+
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Roboto";
     font-size: 16px;

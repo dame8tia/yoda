@@ -7,6 +7,10 @@ const btn = document.querySelector('#id-submit');
 const dotTous = document.querySelector('.section-dot');
 const dot = document.querySelectorAll('.dot');
 const citations = document.querySelectorAll('.citation')
+/*
+dans une balise parent mettre les 4 citations avec un identifiant
+Au click sur les spans (les ronds) on fait un addClass("active") et removeClass ("active") avec une opacity 
+ */
 
 ck.addEventListener('click',validation);
 email.addEventListener('click',validation);//'onmouseenter'
